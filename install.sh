@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Check CPU architecture
 ARCH=$(uname -m)
@@ -19,7 +19,8 @@ fi
 echo "Downloading binary file: ${ARCH}"
 TAG=$(cat /qbittorrent/ReleaseTag)
 echo "qbittorrent version: ${TAG}"
-wget -O ${PWD}/qbittorrentee.zip https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-${TAG}/${ARCH}.zip
+#wget -O ${PWD}/qbittorrentee.zip https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-${TAG}/${ARCH}.zip
+curl -Lvv -o ${PWD}/qbittorrentee.zip https://nightly.link/NyaMisty/qBittorrent-Enhanced-Edition/workflows/build_and_release/v4_3_x/qbittorrent-nox_x86_64-linux-musl_static.zip
 
 echo "Download binary file: ${ARCH} completed"
 

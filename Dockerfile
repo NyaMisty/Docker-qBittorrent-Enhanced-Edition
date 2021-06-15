@@ -1,5 +1,6 @@
-FROM lsiobase/alpine:3.12 as builder
-LABEL maintainer="SuperNG6"
+#FROM lsiobase/alpine:3.12 as builder
+FROM eamonwoortman/alpine-curl-zip as builder
+LABEL maintainer="NyaMisty"
 
 WORKDIR /qbittorrent
 
